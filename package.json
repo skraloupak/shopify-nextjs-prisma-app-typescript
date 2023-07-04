@@ -1,0 +1,68 @@
+{
+  "name": "shopify-nextjs-prisma-app-typescript",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "pretty": "prettier --write ./",
+    "update": "ncu -u",
+    "update:url": "node _developer/updateDashboard.js",
+    "ngrok:auth": "ngrok authtoken <auth-token-goes-here>",
+    "ngrok": "ngrok http 3000",
+    "-----> Shopify <-----": "",
+    "shopify": "shopify",
+    "s:e:create": "shopify app generate extension",
+    "s:e:deploy": "shopify app deploy",
+    "-----> Database <-----": "",
+    "pg:create": "mkdir database; pg_ctl -D database init",
+    "pg:start": "pg_ctl -D database start",
+    "pg:stop": "pg_ctl -D database stop",
+    "-----> Prisma <-----": "",
+    "prisma": "npx prisma",
+    "prisma:push": "npx prisma db push",
+    "prisma:pull": "npx prisma db pull",
+    "-----> Reserved Scripts <-----": "",
+    "prepare": "npx prisma generate"
+  },
+  "dependencies": {
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "@prisma/client": "^4.16.2",
+    "@shopify/app-bridge": "^3.7.8",
+    "@shopify/app-bridge-react": "^3.7.8",
+    "@shopify/polaris": "^11.3.1",
+    "@shopify/shopify-api": "^7.4.0",
+    "cryptr": "^6.2.0",
+    "graphql": "^16.7.1",
+    "next": "13.4.8",
+    "next-api-middleware": "^2.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@shopify/app": "^3.47.3",
+    "@shopify/cli": "^3.47.3",
+    "@shopify/cli-kit": "^3.47.3",
+    "dotenv": "^16.3.1",
+    "ngrok": "^4.3.3",
+    "npm-check-updates": "^16.10.13",
+    "prettier": "^2.8.8",
+    "prisma": "^4.16.2"
+  },
+  "overrides": {
+    "@shopify/cli-kit": {
+      "react": "18.2.0"
+    },
+    "@shopify/cli": {
+      "react": "18.2.0"
+    },
+    "@shopify/app": {
+      "react": "18.2.0"
+    }
+  }
+}
